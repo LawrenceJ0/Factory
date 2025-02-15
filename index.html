@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp 聊天记录生成器</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+</head>
+<body>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 左侧编辑区 -->
+        <div class="editor-section">
+            <h2>编辑区</h2>
+            <!-- 基础信息设置 -->
+            <div class="basic-info">
+                <h3>基础信息</h3>
+                <div class="avatar-section">
+                    <div class="avatar-upload">
+                        <label>我的头像：</label>
+                        <input type="file" id="myAvatar" accept="image/*">
+                        <div class="avatar-preview" id="myAvatarPreview"></div>
+                    </div>
+                    <div class="avatar-upload">
+                        <label>对方头像：</label>
+                        <input type="file" id="theirAvatar" accept="image/*">
+                        <div class="avatar-preview" id="theirAvatarPreview"></div>
+                    </div>
+                </div>
+                <div class="name-section">
+                    <label>对方昵称：</label>
+                    <input type="text" id="theirName" placeholder="输入对方昵称">
+                </div>
+                <div class="time-section">
+                    <label>聊天时间：</label>
+                    <input type="time" id="chatTime" value="09:41">
+                </div>
+            </div>
+
+            <!-- 消息编辑区 -->
+            <div class="message-editor">
+                <h3>消息编辑</h3>
+                <div class="message-list" id="messageList">
+                    <!-- 消息列表将通过 JavaScript 动态生成 -->
+                </div>
+                <button id="addMessage" class="add-message-btn">添加新消息</button>
+            </div>
+        </div>
+
+        <!-- 右侧预览区 -->
+        <div class="preview-section">
+            <h2>预览区</h2>
+            <div class="whatsapp-container">
+                <!-- 状态栏 -->
+                <div class="status-bar">
+                    <div class="time">9:41</div>
+                    <div class="status-icons">
+                        <span class="signal"></span>
+                        <span class="wifi"></span>
+                        <span class="battery"></span>
+                    </div>
+                </div>
+
+                <!-- WhatsApp 标题栏 -->
+                <div class="whatsapp-header">
+                    <div class="header-left">
+                        <div class="back-button">←</div>
+                        <div class="contact-avatar" id="previewAvatar"></div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-name" id="previewName">联系人</div>
+                        <div class="contact-status">在线</div>
+                    </div>
+                </div>
+
+                <!-- 聊天区域 -->
+                <div class="chat-area" id="chatArea">
+                    <!-- 聊天消息将通过 JavaScript 动态生成 -->
+                </div>
+
+                <!-- 输入框区域 -->
+                <div class="input-area">
+                    <div class="input-box">
+                        <span class="emoji-button">😊</span>
+                        <div class="message-input">输入消息...</div>
+                        <span class="attach-button">📎</span>
+                    </div>
+                    <div class="voice-button">🎤</div>
+                </div>
+            </div>
+
+            <!-- 导出选项 -->
+            <div class="export-options">
+                <button id="exportImage">导出图片</button>
+                <button id="exportConfig">导出配置</button>
+                <input type="file" id="importConfig" accept=".json" style="display: none;">
+                <button id="importButton">导入配置</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入脚本文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+</body>
+</html> 

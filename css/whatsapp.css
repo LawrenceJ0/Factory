@@ -1,0 +1,205 @@
+/* WhatsApp 容器样式 */
+.whatsapp-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 状态栏样式 */
+.status-bar {
+    background: #075E54;
+    color: white;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.status-icons {
+    display: flex;
+    gap: 5px;
+}
+
+.signal, .wifi, .battery {
+    width: 15px;
+    height: 15px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 2px;
+}
+
+/* WhatsApp 标题栏样式 */
+.whatsapp-header {
+    background: #075E54;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #128C7E;
+    overflow: hidden;
+}
+
+.contact-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact-status {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* 聊天区域样式 */
+.chat-area {
+    background: #ECE5DD;
+    min-height: 400px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 消息气泡样式 */
+.message {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 7.5px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.message.sent {
+    background: #DCF8C6;
+    margin-left: auto;
+    border-top-right-radius: 0;
+}
+
+.message.received {
+    background: white;
+    margin-right: auto;
+    border-top-left-radius: 0;
+}
+
+.message-time {
+    font-size: 11px;
+    color: #667781;
+    float: right;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+/* 输入区域样式 */
+.input-area {
+    background: #F0F0F0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-box {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message-input {
+    flex: 1;
+    color: #666;
+}
+
+.emoji-button,
+.attach-button,
+.voice-button {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.emoji-button:hover,
+.attach-button:hover,
+.voice-button:hover {
+    opacity: 1;
+}
+
+/* 消息编辑样式 */
+.message-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message-item textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.message-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message-controls button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.move-btn {
+    background: #6c757d;
+    color: white;
+} 
